@@ -1,18 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Terradue.ESA.Sentinel/Terradue/ESA/Sentinel/Tests/ProductTests.cs">
-    <Files>
-      <File FileName="Terradue.ESA.Sentinel/Terradue/ESA/Sentinel/Tests/ProductTests.cs" Line="1" Column="1" />
-      <File FileName="Terradue.ESA.Sentinel/Terradue/ESA/Sentinel/Samples/rs2-iw1-slc-hh-20130426t045831-20130426t045914-001771-000001-001.xml" Line="1" Column="1" />
-      <File FileName="Terradue.ESA.Sentinel/Terradue/ESA/Sentinel/l1ProductType.cs" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="MonoDevelop.NUnit.TestPad">
-        <State expanded="True" selected="True">
-          <Node name="Terradue.ESA.Sentinel" expanded="True">
-            <Node name="Terradue" expanded="True" />
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
