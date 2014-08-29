@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{841E228D-7FA8-4C08-A197-26610921B24F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Terradue.ESA.Sentinel</RootNamespace>
+    <AssemblyName>Terradue.Sentinel.Safe</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CustomCommands>
+      <CustomCommands>
+        <Command type="BeforeBuild" command="xsd s1-level-1-product.xsd /classes /n:Terradue.Sentinel.Safe.Sar /o:../Terradue/Sentinel/Safe/Sar/Generated" workingdir="${ProjectDir}/Schemas" />
+      </CustomCommands>
+    </CustomCommands>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="nunit.framework" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Terradue\Sentinel\Safe\Tests\ProductTests.cs" />
+    <Compile Include="Terradue\Sentinel\Safe\Sar\l1ProductType.cs" />
+    <Compile Include="Terradue\Sentinel\Safe\Sar\Generated\s1-level-1-product.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Folder Include="Schemas\" />
+    <Folder Include="Terradue\" />
+    <Folder Include="Terradue\Sentinel\" />
+    <Folder Include="Terradue\Sentinel\Safe\" />
+    <Folder Include="Terradue\Sentinel\Safe\Tests\" />
+    <Folder Include="Terradue\Sentinel\Safe\Sar\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Schemas\s1-level-1-calibration.xsd" />
+    <None Include="Schemas\s1-level-1-measurement.xsd" />
+    <None Include="Schemas\s1-level-1-noise.xsd" />
+    <None Include="Schemas\s1-level-1-product.xsd" />
+    <None Include="Schemas\s1-level-1-quicklook.xsd" />
+    <None Include="Schemas\s1-map-overlay.xsd" />
+    <None Include="Schemas\s1-object-types.xsd" />
+    <None Include="Schemas\s1-product-preview.xsd" />
+    <None Include="Terradue\Sentinel\Safe\Sar\Samples\rs2-iw1-slc-hh-20130426t045831-20130426t045914-001771-000001-001.xml" />
+    <None Include="Terradue\Sentinel\Safe\Sar\Samples\rs2-iw1-slc-hv-20130426t045831-20130426t045914-001771-000001-004.xml" />
+    <None Include="Terradue\Sentinel\Safe\Sar\Samples\rs2-iw2-slc-hh-20130426t045832-20130426t045914-001771-000001-002.xml" />
+    <None Include="Terradue\Sentinel\Safe\Sar\Samples\rs2-iw2-slc-hv-20130426t045832-20130426t045914-001771-000001-005.xml" />
+    <None Include="Terradue\Sentinel\Safe\Sar\Samples\rs2-iw3-slc-hh-20130426t045833-20130426t045915-001771-000001-003.xml" />
+    <None Include="Terradue\Sentinel\Safe\Sar\Samples\rs2-iw3-slc-hv-20130426t045833-20130426t045915-001771-000001-006.xml" />
+  </ItemGroup>
+</Project>
