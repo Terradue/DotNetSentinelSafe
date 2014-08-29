@@ -1,28 +1,19 @@
 [![Build Status](https://build.terradue.com/buildStatus/icon?job=DotNetSentinelSafe)](https://build.terradue.com/job/DotNetSentinelSafe/)
 
-# DotNetSentinelSafe - .Net library and tools to manipulate ESA Sentinel product and metadata
+# DotNetSentinelSafe - .Net library and tools to manipulate Sentinel product and metadata in SAFE format
 
-Terradue.Sentinel.Safe is a library targeting .NET 4.0 and above providing an easy way to to manipulate Sentinel product and metadata provided by ESA.
+Terradue.Sentinel.Safe is a library targeting .NET 4.0 and above providing an easy way to to manipulate Sentinel product and metadata in SAFE format.
 
 Sentinel SAFE Specification: http://docs.opennebula.org/4.6/integration/system_interfaces/api.html
 
 ## Usage examples
 
 ```c#
-// First create the client
-string proxyUrl = "<YOUR_SERVER_URL>";
-string adminUser = "<YOUR_ADMIN_USERNAME>"; //should be user with driver server_* to allow requests delegation
-string adminPwd = "<YOUR_ADMIN_PASSWORD>"; //SHA1 password
-var one = new OneClient(proxyUrl,adminUser,adminPwd);
+// Deserialize the product metadata annotation
+l1ProductType product = l1ProductType.FromAnnotationXml("../Terradue/Sentinel/Safe/Sar/Samples/rs2-iw1-slc-hh-20130426t045831-20130426t045914-001771-000001-001.xml");
+// print product start date
+Console.WriteLine(product.adsHeader.startTime.ToString("yyyy-MM-ddThh:mm:ss.fffZ"));
 
-// Do a request as admin
-USER_POOL pool = one.UserGetPoolInfo();
-
-// Do a request on behalf of a normal user
-string targetUser = "<YOUR_TARGET_USERNAME>";
-one.StartDelegate(targetUser);
-int RemoteId = one.TemplateInstanciateVM(idTemplate, vmName, false, "");
-one.EndDelegate();
 ```
 
 ## Supported Platforms
@@ -33,15 +24,15 @@ one.EndDelegate();
 
 ## Getting Started
 
-Terradue.DotNet4One is available as NuGet package in releases.
+Terradue.Sentinel.Safe is available as NuGet package in releases.
 
 ```
-Install-Package Terradue.DotNet4One
+Install-Package Terradue.Sentinel.Safe
 ```
 
 ## Build
 
-Terradue.DotNet4One is a single assembly designed to be easily deployed anywhere. 
+Terradue.Sentinel.Safe is a single assembly designed to be easily deployed anywhere. 
 
 To compile it yourself, you’ll need:
 
@@ -51,29 +42,25 @@ To clone it locally click the "Clone in Desktop" button above or run the
 following git commands.
 
 ```
-git clone git@github.com:Terradue/Terradue.OpenNebula.git Terradue.OpenNebula
+git clone git@github.com:Terradue/DotNetSentinelSafe.git DotNetSentinelSafe
 ```
 
 ## TODO
 
-* Following commands are missing
-  * one.acl.*
-  * one.vmpool.accounting
-  * one.document.*
-  * one.documentpool.info
-* Testing!
+* Other metadata
+* Other levels
 
 ## Copyright and License
 
 Copyright (c) 2014 Terradue
 
-Licensed under the [GPL v3 License](https://github.com/Terradue/DotNet4One/blob/master/LICENSE)
+Licensed under the [GPL v2 License](https://github.com/Terradue/DotNetSentinelSafe/blob/master/LICENSE)
 
 ### Questions, bugs, and suggestions
 
-Please file any bugs or questions as [issues](https://github.com/Terradue/DotNet4One/issues/new) 
+Please file any bugs or questions as [issues](https://github.com/Terradue/DotNetSentinelSafe/issues/new) 
 
 ### Want to contribute?
 
-Fork the repository [here](https://github.com/Terradue/DotNet4One/fork) and send us pull requests.
+Fork the repository [here](https://github.com/Terradue/DotNetSentinelSafe/fork) and send us pull requests.
 
