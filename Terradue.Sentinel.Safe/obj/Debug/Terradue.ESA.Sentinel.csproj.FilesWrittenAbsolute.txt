@@ -1,7 +1,0 @@
-/Users/emathot/Workspace/Terradue/products/sugar/DotNetEsaSentinel/Terradue.ESA.Sentinel/obj/Debug/.NETFramework,Version=v4.0.AssemblyAttribute.cs
-/Users/emathot/Workspace/Terradue/products/sugar/DotNetEsaSentinel/Terradue.ESA.Sentinel/bin/Debug/Terradue.ESA.Sentinel.dll.mdb
-/Users/emathot/Workspace/Terradue/products/sugar/DotNetEsaSentinel/Terradue.ESA.Sentinel/bin/Debug/Terradue.ESA.Sentinel.dll
-/Users/emathot/Workspace/Terradue/products/sugar/DotNetEsaSentinel/Terradue.ESA.Sentinel/obj/Debug/Terradue.ESA.Sentinel.dll
-/Users/emathot/Workspace/Terradue/products/sugar/DotNetEsaSentinel/Terradue.ESA.Sentinel/obj/Debug/Terradue.ESA.Sentinel.dll.mdb
-/Users/emathot/Workspace/Terradue/products/sugar/DotNetEsaSentinel/Terradue.ESA.Sentinel/bin/Terradue.ESA.Sentinel.dll.mdb
-/Users/emathot/Workspace/Terradue/products/sugar/DotNetEsaSentinel/Terradue.ESA.Sentinel/bin/Terradue.ESA.Sentinel.dll
