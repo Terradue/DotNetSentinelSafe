@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: s1-map-overlay.xsd 8756 2012-07-30 20:13:02Z rbarstow@DS.MDA.CA $ -->
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+   xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2"
+   xmlns="http://www.opengis.net/kml/2.2" targetNamespace="http://www.opengis.net/kml/2.2"
+   elementFormDefault="qualified" attributeFormDefault="unqualified">
+   <xsd:element name="kml">
+      <xsd:annotation>
+         <xsd:documentation>Comment describing your root element</xsd:documentation>
+      </xsd:annotation>
+   </xsd:element>
+</xsd:schema>
